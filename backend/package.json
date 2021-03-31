@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend do game",
+  "main": "index.js",
+  "repository": "https://github.com/Sublime-Manager/ProjetoTID.git",
+  "author": "Team Sublime",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
