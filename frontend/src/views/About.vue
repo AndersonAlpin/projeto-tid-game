@@ -1,5 +1,7 @@
 <template>
   <div class="about">
-    <h1>Sobre</h1>
+    <h1>Sobredd</h1>
+    <hr>
+    <h6>Teste de tela</h6>
   </div>
 </template>
