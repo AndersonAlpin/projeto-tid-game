@@ -1,5 +1,15 @@
 <template>
   <div class="Game">
-    <h1>Jogo</h1>
+    <Cenario1 />
   </div>
 </template>
+
+<script>
+import Cenario1 from '@/components/cenarios/Cenario1.vue'
+
+export default ({
+  components: {
+     Cenario1
+  }
+})
+</script>
