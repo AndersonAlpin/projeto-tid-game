@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <router-link to="/">Cadastro</router-link> |
+    <!-- <div id="nav">
+      <router-link to="/">Cadastro</router-link> |
       <router-link to="/about">Sobre</router-link> |
       <router-link to="/Login">Login</router-link> |
       <router-link to="/Menu">Menu</router-link> |
       <router-link to="/Ranking">Ranking</router-link> |
-      <router-link to="/Game">Jogo</router-link> | -->
-    </div>
+      <router-link to="/Game">Jogo</router-link> |
+    </div> -->
     <router-view/>
   </div>
 </template>
@@ -21,9 +21,9 @@
   color: #2c3e50;
 }
 
-#nav {
+/* #nav {
   padding: 30px;
-}
+} */
 
 #nav a {
   font-weight: bold;
