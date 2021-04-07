@@ -1,7 +1,24 @@
 <template>
-  <div class="about">
-    <h1>Sobredd</h1>
-    <hr>
-    <h6>Teste de tela</h6>
+  <div class="">
+    <div class="about">
+    </div>
+
+      
+        
   </div>
+  
+  
 </template>
+
+  <style scoped>
+  .about{
+ 
+ 
+  background-color: #470EAE;
+  }
+ 
+
+ 
+  
+ 
+ </style>
