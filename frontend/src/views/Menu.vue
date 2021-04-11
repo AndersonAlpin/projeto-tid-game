@@ -9,6 +9,7 @@
           <button id="butão2">Area medica</button>
           <button id="butão3">Area historiaca</button>
           <img src="../img/logo.jpg" id="logo1">
+          <img src="../img/logo2.jpg" id="logo2">
           
        </div>
        <div id="barrabaixo"></div>
@@ -172,6 +173,16 @@ left: -120.14%;
 right: 27.4%;
 top: 2.26%;
 bottom: 24.39%;
+}
+
+#logo2{
+
+  position: absolute;
+left: -100.14%;
+right: 27.4%;
+top: -25.26%;
+bottom: 10.39%;
+width: 300px;
 }
 
 
