@@ -189,7 +189,7 @@ width: 300px;
 #logo3{
 
 position: absolute;
-left: 155.14%;
+left: 158.14%;
 right: 27.4%;
 top: 20.26%;
 bottom: 10.39%;
