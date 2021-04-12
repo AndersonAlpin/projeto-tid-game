@@ -10,11 +10,13 @@
           <button id="butão3">Area historiaca</button>
           <img src="../img/logo.jpg" id="logo1">
           <img src="../img/logo2.jpg" id="logo2">
+          <img src="../img/logo3.jpg" id="logo3">
+          
           
        </div>
-       <div id="barrabaixo"></div>
+       <div id="barrabaixo"> </div>
 
-       
+       <h3 id="copy">Copyright © 2021 - Desenvolvido Pela equipe Sublime</h3>
   
   </div>
 
@@ -84,7 +86,7 @@ color: #FFFFFF;
 }
 #opc{
 
-  position: absolute;
+position: absolute;
 width: 300px;
 height: 25px;
 left: 70px;
@@ -183,6 +185,33 @@ right: 27.4%;
 top: -25.26%;
 bottom: 10.39%;
 width: 300px;
+}
+#logo3{
+
+position: absolute;
+left: 155.14%;
+right: 27.4%;
+top: 20.26%;
+bottom: 10.39%;
+width: 300px;
+}
+#copy{
+
+  position: absolute;
+width: 650px;
+height: 25px;
+left: 410px;
+top: 850px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 29px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
 }
 
 
