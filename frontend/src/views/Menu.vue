@@ -8,9 +8,9 @@
           <button id="butão1">tecnologia</button>
           <button id="butão2">Area medica</button>
           <button id="butão3">Area historiaca</button>
-          <img src="../img/logo.jpg" id="logo1">
-          <img src="../img/logo2.jpg" id="logo2">
-          <img src="../img/logo3.jpg" id="logo3">
+          <img src="../assets/images/logo.jpg" id="logo1">
+          <img src="../assets/images/logo2.jpg" id="logo2">
+          <img src="../assets/images/logo3.jpg" id="logo3">
           
           
        </div>
