@@ -1,40 +1,46 @@
 <template>
-  <div class="about">
-    <h1>Sobre</h1>
-    <div class="cabecalho">
-      <h1>Sublime</h1>
-    </div>
-    <div class="rodape">
-      <h1>Desenvolvido pela Sublime</h1>
-    </div>
+  <div class="container">
+ <div>
+      <img src="../assets/images/logo.jpg" id="image">
+      <img src="../assets/images/logo3.jpg" id="image2">
+      </div>
+    <h1 id="titulo">Sobre o jogo</h1>
+    <h5 id="texto"> O jogo foi projetado pela equipe Sublime com o objetivo de obtenção de nota na disciplina TID II. O fulcro do jogo é desafiar o usuário a testar 
+      seus conhecimentos através de telas estáticas que estão concomitantes ao tema escolhido. O usuário escolherá uma área de conhecimentos e a partir de cliques responderão questões clicando em imagens perdidas no cenário</h5>
+     
   </div>
 </template>
 
 <style scoped>
-.about {
-  width: 100%;
-  height: 100vh;
-  background-color: #470eae;
-}
-h1 {
-  color: rgb(255, 255, 255);
-}
-.cabecalho {
-  position: absolute;
-  width: 100%;
-  height: 124px;
-  left: 0px;
-  top: 0px;
+#titulo{
+position: absolute;
 
-  background: #5f07ff;
-}
-.rodape {
-  position: absolute;
-  width: 100%;
-  height: 124px;
-  left: 0px;
-  top: 900px;
 
-  background: #5f07ff;
+left: 218px;
+top: 160px;
+
+}
+#texto{
+position: absolute;
+
+
+left: 220px;
+top: 300px;
+right: 220px;
+font-family: Avenir, Roboto, Arial;
+text-align: justify;
+color: rgb(255, 255, 255);
+}
+#image{
+position: absolute;
+left: -50px;
+top: 120px;
+
+}
+#image2{
+position: absolute;
+left: 955px;
+top: 120px;
+
 }
 </style>
