@@ -1,7 +1,6 @@
 <template>
-  <div class="Menu" id="menu">
-       <div id="barra">
-       </div>
+  <b-container>
+       
        <div id="barrameio">
           <h1 id="bemvindo">Bem vindo!</h1>
           <h2 id="opc">Qual tema deseja jogar?</h2>
@@ -9,18 +8,14 @@
           <button id="butão2">Area medica</button>
           <button id="butão3">Area historiaca</button>
           <img src="../assets/images/logo.jpg" id="logo1">
-          <img src="../assets/images/logo2.jpg" id="logo2">
+          
           <img src="../assets/images/logo3.jpg" id="logo3">
-          
-          
+        
        </div>
-       <div id="barrabaixo"> </div>
-
-       <h3 id="copy">Copyright © 2021 - Desenvolvido Pela equipe Sublime</h3>
   
-  </div>
-
   
+
+  </b-container>
 </template>
 
 
@@ -32,38 +27,10 @@
 
 <style>
 
-#menu {
 
 
-  position: absolute;
-width: 1500px;
-height: 819px;
-left: 0px;
-top: 60px;
-
-background: #470EAE;
-}
-#barra{
-position: absolute;
-width: 1500px;
-height: 124px;
-left: 0px;
-top: -100px;
-
-background: #5F07FF;
 
 
-}
-#barrameio{
-  position: absolute;
-width: 450px;
-height: 510px;
-left: 489px;
-top: 70px;
-
-background: #5F07FF;
-border-radius: 41px;
-} 
 #bemvindo{
   position: absolute;
 width: 190px;
@@ -101,16 +68,7 @@ text-transform: uppercase;
 
 color: #FFFFFF;
 }
-#barrabaixo{
 
-  position: absolute;
-width: 1500px;
-height: 107px;
-left: 0px;
-top: 810px;
-
-background: #5F07FF;
-}
 #butão1{
 position: absolute;
 width: 334px;
@@ -171,25 +129,16 @@ border-radius: 14px;
 #logo1{
 
   position: absolute;
-left: -120.14%;
+left: -199.14%;
 right: 27.4%;
 top: 2.26%;
 bottom: 24.39%;
 }
 
-#logo2{
-
-  position: absolute;
-left: -100.14%;
-right: 27.4%;
-top: -25.26%;
-bottom: 10.39%;
-width: 300px;
-}
 #logo3{
 
 position: absolute;
-left: 158.14%;
+left: 270.14%;
 right: 27.4%;
 top: 20.26%;
 bottom: 10.39%;
@@ -213,6 +162,19 @@ text-transform: uppercase;
 color: #FFFFFF;
 
 }
+ @media screen and (min-width:640px) {
+   
+  #barrameio{
+  position: absolute;
+width: 474px;
+height: 623px;
+left: 940px;
+top: 230px;
 
+background: #5F07FF;
+border-radius: 41px;
+} 
+
+ }
 
 </style>
