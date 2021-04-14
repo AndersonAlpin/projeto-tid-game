@@ -1,10 +1,8 @@
 import { Router } from "express"
-import { getRepository } from "typeorm";
+import PlayersController from "./controllers/PlayersController";
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-  return res.json({ message: "Servidor rodando!" });
-})
+routes.get('/', PlayersController.index);
 
 export default routes;
