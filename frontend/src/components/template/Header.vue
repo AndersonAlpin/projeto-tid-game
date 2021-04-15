@@ -34,7 +34,7 @@ export default {
 }
 
 .logo {
-  margin-left: 80px;
+  margin-left: 8px;
 }
 
 .menu-icons {
