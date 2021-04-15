@@ -29,7 +29,7 @@ export default {
 <style>
 .navbar {
   background-color: #5f07ff;
-  min-width: 1000px;
+  /* min-width: 1000px; */
   height: 100px;
 }
 
