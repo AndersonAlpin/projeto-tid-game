@@ -30,23 +30,7 @@
 </template>
 
 <style scoped>
-#sobre {
-  width: 776px;
-  text-align: justify;
-  text-transform: uppercase;
-}
-
 #titulo {
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 575px) {
-  #sobre {
-    width: 100%;
-  }
-}
-
-/* #titulo {
   color: rgb(255, 255, 255);
 }
 #texto {
@@ -54,20 +38,18 @@
 
   margin-top: 20px;
 
-  font-family: Avenir, Roboto, Arial;
+  font-family: "Avenir", "Roboto", Arial;
   text-align: justify;
   color: rgb(255, 255, 255);
-} */
-/* #image{
-position: absolute;
-left: -50px;
-top: 120px;
-
 }
-#image2{
-position: absolute;
-left: 100vh;
-top: 100px;
-
-}  */
+#image {
+  position: absolute;
+  left: -50px;
+  top: 120px;
+}
+#image2 {
+  position: absolute;
+  left: 100vh;
+  top: 100px;
+}
 </style>
