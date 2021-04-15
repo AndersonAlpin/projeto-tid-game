@@ -1,21 +1,9 @@
 <template>
-  <header class="navbar">
-    <div class="container-fluid">
-      <img class="nav-brand logo" src="@/assets/images/logo-1.png" />
-      <form class="d-flex menu-icons">
-        <a href="#">
-          <img
-            class="nav-brand img-icons"
-            src="@/assets/images/icon-whatsapp.png"
-          />
-        </a>
-        <a href="#">
-          <img
-            class="nav-brand img-icons"
-            src="@/assets/images/icon-facebook.png"
-          />
-        </a>
-      </form>
+  <header class="header">
+    <img src="@/assets/images/logo-1.png" class="logo" />
+    <div class="redes-sociais">
+      <img src="@/assets/images/icon-whatsapp.png" class="img-redes-sociais" />
+      <img src="@/assets/images/icon-facebook.png" class="img-redes-sociais" />
     </div>
   </header>
 </template>
@@ -27,21 +15,34 @@ export default {
 </script>
 
 <style>
-.navbar {
+.header {
+  grid-area: header;
   background-color: #5f07ff;
-  /* min-width: 1000px; */
-  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  margin-left: 8px;
+  position: absolute;
+  width: 200px;
+  left: 50px;
 }
 
-.menu-icons {
-  margin-right: 80px;
+.redes-sociais {
+  position: absolute;
+  right: 50px;
 }
 
-.img-icons {
-  padding: 0 5px;
+.img-redes-sociais {
+  width: 40px;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 380px) {
+  .redes-sociais {
+    display: none;
+  }
 }
 </style>

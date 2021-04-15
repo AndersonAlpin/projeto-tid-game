@@ -1,45 +1,49 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Cadastro</router-link> |
-      <router-link to="/about">Sobre</router-link> |
-      <router-link to="/Login">Login</router-link> |
-      <router-link to="/Menu">Menu</router-link> |
-      <router-link to="/Ranking">Ranking</router-link> |
-      <router-link to="/Game">Jogo</router-link> |
-    </div> -->
     <Header />
+    <Content />
     <Footer />
-    <router-view />
   </div>
 </template>
 
 <script>
-import Header from "./components/template/Header.vue";
-import Footer from "./components/template/Footer.vue";
+import Header from "@/components/template/Header.vue";
+import Content from "@/components/template/Content.vue";
+import Footer from "@/components/template/Footer.vue";
 
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, Content },
 };
 </script>
 
 <style>
+* {
+  font-family: "Roboto", sans-serif;
+}
 
+body {
+  margin: 0;
+}
 
 #app {
-  font-family: Avenir, Roboto, Arial, sans-serif;
+  color: #ffffff;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #fff;
+
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
 }
 
-/* #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+@media screen and (max-width: 320px) {
+  #app {
+    width: 300px;
+  }
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>
