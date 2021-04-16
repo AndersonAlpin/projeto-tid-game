@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 export default {
   async startAsync  () {
-    const mongodbUrl = 'mongodb+srv://tid2:0hS9jLI1dfZoCmQy@tid2.78uyk.mongodb.net/tid2?retryWrites=true&w=majority'
+    const mongodbUrl = 'Informar URL'
   
     await mongoose.connect(mongodbUrl, {
+      useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true
     })

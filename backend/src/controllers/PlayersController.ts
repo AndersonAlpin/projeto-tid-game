@@ -22,9 +22,9 @@ export default {
     const result = await playerService.getAll();
     return response.status(200).json(result);
   },
-  
+
   async playersQuery(request: Request, response: Response) {
-    const result = await playerService.getSearchQuery(request.query);
+    const result: any = await playerService.getSearchQuery(request.query);
     if(result.erro) return response.status(400).json(result.erro);
     if(result.message) return response.status(200).json(result.message);
     return response.status(200).json(result);
