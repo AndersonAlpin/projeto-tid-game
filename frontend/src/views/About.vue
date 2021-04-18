@@ -1,46 +1,57 @@
 <template>
-  <div class="container">
- <div>
-      <img src="../assets/images/logo.jpg" id="image">
-      <img src="../assets/images/logo3.jpg" id="image2">
+  <div class="container" id="sobre">
+    <div class="row">
+      
+        <div id="titulo" class="col-12 col-sm-12"><h2>Sobre</h2></div>
+          <div class="col-12 col-sm-12">
+          <div id="texto">
+         O fulcro do jogo é desafiar o usuário a testar seus conhecimentos através de telas estáticas que estão concomitantes ao tema escolhido.
+         O usuário escolherá uma área de conhecimentos e a partir de cliques responderão questões clicando em imagens perdidas no cenário
+         Exemplo:
+         Em um cenário onde o tema escolhido foi tecnologia. O desafio seria o usuário encontrar a peça responsável por armazenar o sistema e arquivos.
+         Desafio:
+         A cada vitoria o jogo vai aumentar a dificuldade de imagens perdidas no cenario, fazendo que o jogador tenha mais raciocínio lógico e provocando tambem ele aprender mais sobre o tema.
+         Recompesa :
+         A cada vitoria o jogo vai da pontos e vai subir de nivel, jogador tambem poderar ganhar dicas.
+         Regras:
+         o jogador so vai poder subir de nivel depois que atigir determinados pontos.
+         Narrativa:
+         O jogo vai narrar assuntos como tecnologia, saude etc..
+         <div id="button1">
+          <a href="/menu.vue" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">jogar</a></div>
+        </div>
       </div>
-    <h1 id="titulo">Sobre o jogo</h1>
-    <h5 id="texto"> O jogo foi projetado pela equipe Sublime com o objetivo de obtenção de nota na disciplina TID II. O fulcro do jogo é desafiar o usuário a testar 
-      seus conhecimentos através de telas estáticas que estão concomitantes ao tema escolhido. O usuário escolherá uma área de conhecimentos e a partir de cliques responderão questões clicando em imagens perdidas no cenário</h5>
-     
+    </div>
   </div>
 </template>
 
 <style scoped>
-#titulo{
-position: absolute;
-
-
-left: 218px;
-top: 160px;
-
+#titulo {
+  color: rgb(255, 255, 255);
 }
-#texto{
-position: absolute;
+#texto {
+  width: 100%;
 
+  margin-top: 20px;
 
-left: 220px;
-top: 300px;
-right: 220px;
-font-family: Avenir, Roboto, Arial;
-text-align: justify;
-color: rgb(255, 255, 255);
+  font-family: "Avenir", "Roboto", Arial;
+  text-align: justify;
+  color: rgb(255, 255, 255);
 }
-#image{
-position: absolute;
-left: -50px;
-top: 120px;
-
+#image {
+  position: absolute;
+  left: -50px;
+  top: 120px;
 }
-#image2{
-position: absolute;
-left: 955px;
-top: 120px;
+#image2 {
+  position: absolute;
+  left: 100vh;
+  top: 100px;
+}
+#button1{
+  
+   
+
 
 }
 </style>

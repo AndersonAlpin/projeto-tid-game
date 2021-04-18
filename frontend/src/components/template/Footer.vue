@@ -1,20 +1,24 @@
 <template>
-  <footer class="footer fixed-bottom">
+  <footer class="footer">
     <span> Copyright &copy; 2021 - Desenvolvido pela equipe Sublime </span>
   </footer>
 </template>
 
 <script>
 export default {
-  name: "Footer",
+  name: "Footer"
 };
 </script>
 
 <style>
-.footer {
-  background-color: #5f07ff;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-}
+  .footer {
+    grid-area: footer;
+    background-color: #5f07ff;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
