@@ -1,8 +1,24 @@
+import jwtService from "./jwt";
 import { v4 as uuid } from "uuid";
 import { PlayerClass } from "./../models/Player";
 import Player from "../models/Player";
+import bcrypt from "bcryptjs";
 
 export default {
+  async correctPassword(password: string, passwordDb: string) {
+    const match = await bcrypt.compare(password, passwordDb);
+    if (!match) {
+      return { error: "Senha inválida." };
+    } else {
+      return match;
+    }
+  },
+  async bcryptDecrypt(value: string) {
+    const [, hash] = value.split(" ");
+    const [email, password] = Buffer.from(hash, "base64").toString().split(":");
+    return { email, password };
+  },
+
   /**
    * Função realizar validação de existente e caso não exista cria no banco o player e encriptando a senha.
    * @param body: Player.
@@ -102,4 +118,33 @@ export default {
         "Não foi informado nem um critério de pesquisa. Por gentileza informar um dos 3(id, email, nick).",
     };
   },
+
+  async loginValidato(basicAuth: any) {
+    const loginAndPassword = await this.bcryptDecrypt(basicAuth);
+    const playerObj: any = await Player.findOne({
+      email: loginAndPassword.email,
+    });
+    if (!playerObj) return { error: "E-mail ou Senha inválida." };
+    const validatoPassword: any = await this.correctPassword(
+      loginAndPassword.password,
+      playerObj.password
+    );
+    if (validatoPassword.error) return validatoPassword;
+    const { password, ...player } = playerObj.toObject();
+    const token: any = await jwtService.sign({ user: player.id });
+    return { player, token };
+  },
+
+  async authMiddlewareService(token: string) {
+    const [, authToken] = token.split(' ');
+    try {
+      const payload: any = await jwtService.verify(authToken);
+      const player = await  Player.findOne({id: payload.user});
+      if(!player) return {error: 'Sem permissão ou não autenticado.'}
+      return player;
+    } catch (error) {
+      return {error: error}
+    }
+
+  }
 };
