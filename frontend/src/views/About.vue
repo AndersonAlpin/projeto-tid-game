@@ -48,10 +48,5 @@
   left: 100vh;
   top: 100px;
 }
-#button1{
-  
-   
 
-
-}
 </style>
