@@ -43,7 +43,7 @@ body {
 
 @media screen and (max-width: 320px) {
   #app {
-    width: 300px;
+    max-width: 320px;
   }
 }
 </style>
