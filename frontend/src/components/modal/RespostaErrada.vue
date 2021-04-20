@@ -25,11 +25,9 @@ export default {};
   height: 100vh;
   min-width: 300px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: 2000;
-  overflow-y: scroll;
-  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.5);
 
   display: flex;
@@ -38,7 +36,6 @@ export default {};
 }
 
 .modal-box {
-  position: absolute;
   background: #5f07ff;
   width: 350px;
   height: 500px;
@@ -52,25 +49,25 @@ export default {};
   position: absolute;
   width: 320px;
   height: 371px;
-  top: -50px;
+  top: 30px;
 }
 
 .fundo-inferior {
   position: absolute;
   width: 270px;
   height: 371px;
-  top: 50px;
+  top: 100px;
 }
 
 .boneco {
   position: absolute;
   width: 250px;
-  top: 125px;
+  top: 175px;
 }
 
 .title {
   position: absolute;
-  top: 275px;
+  top: 325px;
 
   font-size: 45px;
   text-transform: uppercase;
@@ -82,14 +79,14 @@ export default {};
 
 .subtitle {
   position: absolute;
-  top: 325px;
+  top: 375px;
   font-size: 24px;
   text-transform: uppercase;
 }
 
 .button-group {
   position: absolute;
-  top: 400px;
+  top: 450px;
 }
 
 .button-group button {
