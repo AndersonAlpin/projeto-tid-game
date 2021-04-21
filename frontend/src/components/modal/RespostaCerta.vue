@@ -3,7 +3,7 @@
     <div class="modal-box">
       <img src="@/assets/images/fundo-superior.png" class="fundo-superior" />
       <img src="@/assets/images/fundo-inferior.png" class="fundo-inferior" />
-      <img src="@/assets/images/boneco.png" class="boneco" />
+      <img src="@/assets/images/hommer.gif" class="boneco" />
       <span class="title">Parabéns!!</span>
       <span class="subtitle">Você acertou!</span>
 
@@ -41,7 +41,7 @@ export default {};
   position: absolute;
   background: #5f07ff;
   width: 350px;
-  height: 500px;
+  height: 450px;
   border-radius: 41px;
 
   display: flex;
@@ -52,25 +52,25 @@ export default {};
   position: absolute;
   width: 320px;
   height: 371px;
-  top: -50px;
+  top: -70px;
 }
 
 .fundo-inferior {
   position: absolute;
   width: 270px;
   height: 371px;
-  top: 50px;
+  top: 20px;
 }
 
 .boneco {
   position: absolute;
   width: 250px;
-  top: 125px;
+  top: 95px;
 }
 
 .title {
   position: absolute;
-  top: 275px;
+  top: 250px;
 
   font-size: 45px;
   text-transform: uppercase;
@@ -82,14 +82,14 @@ export default {};
 
 .subtitle {
   position: absolute;
-  top: 325px;
+  top: 300px;
   font-size: 24px;
   text-transform: uppercase;
 }
 
 .button-group {
   position: absolute;
-  top: 400px;
+  top: 370px;
 }
 
 .button-group button {
