@@ -17,8 +17,7 @@
          o jogador so vai poder subir de nivel depois que atigir determinados pontos.
          Narrativa:
          O jogo vai narrar assuntos como tecnologia, saude etc..
-         <div id="button1">
-          <a href="/menu.vue" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">jogar</a></div>
+        
         </div>
       </div>
     </div>
