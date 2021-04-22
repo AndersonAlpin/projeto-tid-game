@@ -1,14 +1,15 @@
 <template>
   <div class="register">
-    <RespostaCerta />
+    <RespostaErrada />
   </div>
 </template>
 
 <script>
-import RespostaCerta from "@/components/modal/RespostaCerta.vue";
+// import RespostaCerta from "@/components/modal/RespostaCerta.vue";
+import RespostaErrada from "@/components/modal/RespostaErrada.vue";
 
 export default {
-  components: { RespostaCerta },
+  components: { RespostaErrada },
 };
 </script>
 

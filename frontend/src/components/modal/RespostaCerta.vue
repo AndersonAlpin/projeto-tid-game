@@ -9,7 +9,7 @@
 
       <div class="button-group">
         <button class="btn button-sair">SAIR</button>
-        <button class="btn button-proximo">Próximo</button>
+        <button class="btn button-proximo">IR PARA PRÓXIMA</button>
       </div>
     </div>
   </div>
@@ -93,9 +93,9 @@ export default {};
 }
 
 .button-group button {
-  width: 130px;
+  width: 136px;
   height: 35px;
-  font-size: 12px;
+  font-size: 11px;
   margin: 5px;
   border-radius: 12px;
   text-transform: uppercase;
