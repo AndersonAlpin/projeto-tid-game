@@ -1,7 +1,7 @@
 <template>
   <b-container>
        
-       <div id="barrameio">
+       <div id="barrameio"   class="d-flex p-2 bd-highlight">
           <h1 id="bemvindo">Bem vindo!</h1>
           <h2 id="opc">Qual tema deseja jogar?</h2>
           <button id="butão1">tecnologia</button>
