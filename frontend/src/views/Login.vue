@@ -9,10 +9,7 @@
             <div class="senh">
               <input id="senha" type="Password" placeholder="SENHA:">
             </div>
-      </form>
-        
-          
-          
+      </form> 
        </div>
   </div>
   
