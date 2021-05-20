@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <span> Copyright &copy; 2021 - Desenvolvido pela equipe Sublime </span>
+    <span> Copyright &copy; 2021 - EQuipe Sublime </span>
   </footer>
 </template>
 
