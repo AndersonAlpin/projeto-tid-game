@@ -22,10 +22,12 @@ export default {
 
 #fundo{
 
-width: 1715px;
+width: 1920px;
 position: fixed;
-left: 0;
-top: 72px;
+left: -30px;
+top: 75px;
+margin:-4px 0 0 30px;
+height:828px;    
 
 
 
@@ -43,7 +45,7 @@ top: 72px;
     width:60px;               /* largura para o botão */
     height:30px;              /* altura para o botão */
     padding:0;
-    margin:5px 0 0 60px;   /* margem à esquerda e ao topo metade da medida do botão */
+    margin:550px 0 0 300px;   /* margem à esquerda e ao topo metade da medida do botão */
     border:0 none;
  
     
