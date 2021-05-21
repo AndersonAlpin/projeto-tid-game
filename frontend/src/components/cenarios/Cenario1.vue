@@ -4,7 +4,7 @@
   
  <img src="@/assets/images/cenarioum.jpg" id="fundo" />
   
-  <button id="close" class="closing" onClick="javascript:close_clip()"><img src="@/assets/images/controle.png" /></button>
+  <button   onClick="javascript:close_clip()"><img src="@/assets/images/controle.png" /></button>
  
  
  </div>
@@ -42,7 +42,7 @@ height:828px;
     z-index:1;
     top:50%;
     left:50%;
-    width:60px;               /* largura para o botão */
+    width:0px;               /* largura para o botão */
     height:30px;              /* altura para o botão */
     padding:0;
     margin:550px 0 0 300px;   /* margem à esquerda e ao topo metade da medida do botão */
