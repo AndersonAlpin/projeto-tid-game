@@ -51,4 +51,20 @@ height:828px;
     
 }
 
+#efeito {
+
+ border: none;
+ color: #ffffff;
+ padding: 20px;
+ margin: 10PX;
+ font-size: 24PX;
+ border-radius: 10px;
+ position: relative;
+ box-sizing: border-box;
+ cursor: pointer;
+ transition: all 400ms ease;
+
+
+}
+
 </style>
