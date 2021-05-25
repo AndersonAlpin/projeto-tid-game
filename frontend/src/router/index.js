@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Register from '../views/Register.vue'
 import About from '../views/About.vue'
 import Login from '../views/Login.vue'
-import Menu from '../views/Menu.vue'
+import MenuCategorias from '../views/MenuCategorias.vue'
 import Ranking from '../views/Ranking.vue'
 import Game from '../views/Game.vue'
 
@@ -27,9 +27,9 @@ const routes = [
     component: Register
   },
   {
-    path: '/Menu',
-    name: 'Menu',
-    component: Menu
+    path: '/menu/categorias',
+    name: 'MenuCategorias',
+    component: MenuCategorias
   },
   {
     path: '/Ranking',
