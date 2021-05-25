@@ -36,6 +36,9 @@
           <p>Narrativa:</p>
           <p>O jogo vai narrar assuntos como tecnologia, saude etc..</p>
         </div>
+        <div class="botao">
+          <button id="botao" class="btn">Jogar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -45,16 +48,23 @@
 #titulo {
   color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 40px;
   text-transform: uppercase;
 }
 
 #texto {
   width: 100%;
   margin-top: 20px;
-  font-size: 18px;
   line-height: 22px;
   text-align: justify;
   color: rgb(255, 255, 255);
+}
+
+.botao {
+  text-align: center;
+}
+
+.botao button {
+  width: 150px;
+  background: #11C891;
 }
 </style>
