@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Register from '../views/Register.vue'
-import About from '../views/About.vue'
-import Login from '../views/Login.vue'
 import MenuCategorias from '../views/MenuCategorias.vue'
+import Register from '../views/Register.vue'
 import Ranking from '../views/Ranking.vue'
+import Login from '../views/Login.vue'
+import About from '../views/About.vue'
+import Menu from '../views/Menu.vue'
 import Game from '../views/Game.vue'
 
 Vue.use(VueRouter)
@@ -30,6 +31,11 @@ const routes = [
     path: '/menu/categorias',
     name: 'MenuCategorias',
     component: MenuCategorias
+  },
+  {
+    path: '/menu',
+    name: 'Menu',
+    component: Menu
   },
   {
     path: '/Ranking',
