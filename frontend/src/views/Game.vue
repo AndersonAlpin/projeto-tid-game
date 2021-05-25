@@ -1,15 +1,21 @@
 <template>
-  <div class="Game">
-    <Cenario1 />
+  <div id="game">
+    <HeaderGame />
+    <Cenario />
   </div>
 </template>
 
 <script>
-import Cenario1 from '@/components/cenarios/Cenario1.vue'
+import Cenario from "@/components/cenarios/Cenario.vue";
+import HeaderGame from "@/components/template/HeaderGame.vue";
 
-export default ({
+export default {
   components: {
-     Cenario1
-  }
-})
+    Cenario,
+    HeaderGame,
+  },
+};
 </script>
+
+<style scoped>
+</style>

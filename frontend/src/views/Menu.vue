@@ -4,7 +4,6 @@
       <div class="bem-vindo">
         <span>Bem Vindo!</span>
       </div>
-      <span class="linha-horinzontal"></span>
 
       <div class="form">
         <div class="button-group">
@@ -46,14 +45,8 @@ export default {};
   text-align: center;
   font-size: 35px;
   top: 80px;
-}
 
-.linha-horinzontal {
-  position: absolute;
-  top: 130px;
-  width: 140px;
-  height: 3px;
-  background-color: #ffffff;
+  border-bottom: 3px solid #fff;
 }
 
 .form {
