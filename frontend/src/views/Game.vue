@@ -1,15 +1,24 @@
 <template>
-  <div class="Game">
-    <Cenario1 />
+  <div id="game">
+    <HeaderGame>
+      <button class="btn btn-warning me-1">Desistir</button>
+      <button class="btn btn-info">Pular</button>
+    </HeaderGame>
+    <Cenario3 />
   </div>
 </template>
 
 <script>
-import Cenario1 from '@/components/cenarios/Cenario1.vue'
+import Cenario3 from "@/components/cenarios/Cenario3.vue";
+import HeaderGame from "@/components/template/HeaderGame.vue";
 
-export default ({
+export default {
   components: {
-     Cenario1
-  }
-})
+    Cenario3,
+    HeaderGame,
+  },
+};
 </script>
+
+<style scoped>
+</style>

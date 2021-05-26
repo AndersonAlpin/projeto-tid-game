@@ -2,9 +2,9 @@
  
  <div class="thumbnail-wrapper">
   
- <img src="@/assets/images/cenarioum.jpg" id="fundo" />
+ <img src="@/assets/cenarios/cenario2.png" id="fundo" />
   
-  <button   onClick="javascript:close_clip()"><img src="@/assets/images/controle.png" /></button>
+  <button   onClick="javascript:close_clip()"><img src="@/assets/cenarios/controle.png" /></button>
  
  
  </div>

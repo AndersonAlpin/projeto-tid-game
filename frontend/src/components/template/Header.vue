@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Audio from '@/views/Audio.vue';
+import Audio from '@/components/Audio.vue';
 
 export default {
   name: "Header", components: { Audio },

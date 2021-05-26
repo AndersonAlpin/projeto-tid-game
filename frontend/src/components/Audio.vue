@@ -1,6 +1,6 @@
 <template>
   <div>
-  <audio src="@/audio.mp3"></audio>
+  <audio src="@/assets/audio/audio.mp3"></audio>
   <button>play</button>
   <button>pause</button>
    </div>
