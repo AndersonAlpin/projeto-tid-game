@@ -1,8 +1,8 @@
 <template>
   <div>
   <audio src="@/audio.mp3"></audio>
-  <button>play</button>
-  <button>pause</button>
+  <button onclik=play()>play</button>
+  <button oncli=pause() id="pause">pause</button>
    </div>
 
    
@@ -11,11 +11,13 @@
 
 
 const button = document.querySelector('button')
-button.addEventListener('click', function(){
+button.addEventListener('click', function play(){
   const audio = document.querySelector('audio')
-  audio.pause()
+  audio.play()
 
 })
+
+
 </script>
 
 
