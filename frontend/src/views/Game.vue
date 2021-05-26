@@ -1,17 +1,20 @@
 <template>
   <div id="game">
-    <HeaderGame />
-    <Cenario />
+    <HeaderGame>
+      <button class="btn btn-warning me-1">Desistir</button>
+      <button class="btn btn-info">Pular</button>
+    </HeaderGame>
+    <Cenario3 />
   </div>
 </template>
 
 <script>
-import Cenario from "@/components/cenarios/Cenario.vue";
+import Cenario3 from "@/components/cenarios/Cenario3.vue";
 import HeaderGame from "@/components/template/HeaderGame.vue";
 
 export default {
   components: {
-    Cenario,
+    Cenario3,
     HeaderGame,
   },
 };

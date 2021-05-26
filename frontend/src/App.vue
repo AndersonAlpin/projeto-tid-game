@@ -30,7 +30,7 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
   height: 100vh;
   display: grid;
   grid-template-rows: 70px 1fr 40px;
