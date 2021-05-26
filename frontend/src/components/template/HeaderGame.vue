@@ -7,11 +7,9 @@
           <button class="btn btn-info">Pular</button>
         </a>
         <div id="questao">
-          {{questao}}
+          {{ questoes[index].questao }}
         </div>
-        <div id="pontuacao">
-          PONTUAÇÃO: <span class="pontos">3000</span>
-        </div>
+        <div id="pontuacao">PONTUAÇÃO: <span class="pontos">3000</span></div>
       </div>
     </nav>
   </div>
@@ -19,11 +17,20 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      questao: "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?"
-    }
-  }
+      index: 0,
+      questoes: [
+        {
+          questao:
+            "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?",
+        },
+        {
+          questao: "Clique no dispositívo que consegue controlar o computador."
+        }
+      ],
+    };
+  },
 };
 </script>
 
@@ -44,7 +51,7 @@ export default {
   border-bottom: 2px solid #ffffff;
 }
 
-.pontos{
+.pontos {
   padding: 4px 7px;
   border: 2px solid #fff;
   border-radius: 10px;

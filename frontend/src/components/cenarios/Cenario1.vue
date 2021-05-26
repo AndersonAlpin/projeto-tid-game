@@ -1,70 +1,78 @@
 <template>
- 
- <div class="thumbnail-wrapper">
-  
- <img src="@/assets/cenarios/cenario2.png" id="fundo" />
-  
-  <button   onClick="javascript:close_clip()"><img src="@/assets/cenarios/controle.png" /></button>
- 
- 
- </div>
+    <div class="container">
+      <template >
+        <div id="box">
+          <!-- Cenário -->
+          <img id="cenario" class="cenario" src="@/assets/cenarios/cenario1.png">
 
-
+          <!-- Alternativas -->
+          <img class="opcoes" id="opcao-1" src="@/assets/cenarios/carregadorPortatil.png">
+          <img class="opcoes" id="opcao-2" src="@/assets/cenarios/carregadorNotebook.png">
+          <img class="opcoes" id="opcao-3" src="@/assets/cenarios/carregadorCelular.png">
+        </div>
+      </template>
+  </div>
 </template>
 
 <script>
 export default {
-
+  methods: {
+  }
 }
 </script>
 
-<style>
-
-#fundo{
-
-width: 1920px;
-position: fixed;
-left: -30px;
-top: 75px;
-margin:-4px 0 0 30px;
-height:828px;    
-
-
-
+<style scoped>
+#box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.thumbnail-wrapper {
-    display:inline-block;
-    position:relative;
-}
-.thumbnail-wrapper button {
-    position:absolute;
-    z-index:1;
-    top:50%;
-    left:50%;
-    width:0px;               /* largura para o botão */
-    height:30px;              /* altura para o botão */
-    padding:0;
-    margin:550px 0 0 300px;   /* margem à esquerda e ao topo metade da medida do botão */
-    border:0 none;
- 
-    
+#box img.cenario {
+  margin-top: 25px;
+  width: 90%;
+  border: 5px solid rgb(61, 52, 52);
 }
 
-#efeito {
+img#opcao-1{
+  position: absolute;
+  width: 300px;
+  left: 80px;
+  bottom: 20px;
+}
 
- border: none;
- color: #ffffff;
- padding: 20px;
- margin: 10PX;
- font-size: 24PX;
- border-radius: 10px;
- position: relative;
- box-sizing: border-box;
- cursor: pointer;
- transition: all 400ms ease;
+img#opcao-1:hover{
+  width: 310px;
+}
 
+img#opcao-2{
+  position: absolute;
+  width: 200px;
+  right: 110px;
+  bottom: 150px;
+}
 
+img#opcao-2:hover{
+  width: 210px;
+}
+
+img#opcao-3{
+  position: absolute;
+  width: 150px;
+  right: 130px;
+  bottom: 10px;
+}
+
+img#opcao-3:hover{
+  width: 160px;
+}
+
+img.opcoes:hover{
+  cursor: pointer;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 </style>
