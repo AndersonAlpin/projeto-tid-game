@@ -3,13 +3,20 @@
     <Header />
     <Content />
     <Footer />
+    
+  
+  
+  
   </div>
+
 </template>
 
 <script>
 import Header from "@/components/template/Header.vue";
 import Content from "@/components/template/Content.vue";
 import Footer from "@/components/template/Footer.vue";
+
+
 
 export default {
   components: { Header, Footer, Content },

@@ -1,5 +1,6 @@
 <template>
   <div id="register">
+     
     <div class="box">
       <div class="logo">
         <img src="@/assets/images/logo-2.png" alt="SUBLIME GAMING" />
@@ -17,6 +18,8 @@
         </div>
       </form>
     </div>
+
+   
   </div>
 </template>
 
@@ -96,5 +99,6 @@ export default {};
   font-size: 12px;
   line-height: 12px;
   background: #11C891;
+  
 }
 </style>

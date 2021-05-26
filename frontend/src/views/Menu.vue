@@ -1,6 +1,8 @@
 <template>
   <div id="register">
     <div class="box">
+
+     
       <div class="bem-vindo">
         <span>Bem Vindo!</span>
       </div>
