@@ -9,7 +9,7 @@
       <div class="form">
         <div class="button-group">
           <button @click="jogar" class="btn jogar">JOGAR</button>
-          <button class="btn ranking">RANKING</button>
+          <button @click="ranking" class="btn ranking">RANKING</button>
           <button @click="sobre" class="btn sobre">SOBRE O JOGO</button>
         </div>
       </div>
@@ -26,6 +26,9 @@ export default {
     sobre() {
       this.$router.push({ name: "About" });
     },
+    ranking() {
+      this.$router.push({ name: "Ranking"})
+    }
   },
 };
 </script>

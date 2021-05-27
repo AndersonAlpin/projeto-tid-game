@@ -38,12 +38,12 @@ const routes = [
     component: Menu
   },
   {
-    path: '/Ranking',
+    path: '/ranking',
     name: 'Ranking',
     component: Ranking
   },
   {
-    path: '/Game',
+    path: '/game',
     name: 'Game',
     component: Game
   }

@@ -34,6 +34,13 @@ export default new Vue({
     },
     quandoTentarNovamente(callback) {
       this.$on('tentarNovamente', callback)
+    },
+
+    partidaFinalizada(pontos){
+      this.$emit('partidaFinalizada', pontos)
+    },
+    quandoPartidaFinalizada(callback) {
+      this.$on('partidaFinalizada', callback)
     }
   }
 })
