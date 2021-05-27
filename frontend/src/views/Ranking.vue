@@ -21,7 +21,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #ranking {
   text-align: center;
   text-transform: uppercase;
