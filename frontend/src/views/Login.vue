@@ -6,23 +6,41 @@
       </div>
 
       <form class="form">
-        <input type="email" placeholder="E-MAIL" />
-        <input type="password" placeholder="SENHA" />
+        <input v-model.lazy.trim="email" type="email" placeholder="E-MAIL" />
+        <input v-model="senha" type="password" placeholder="SENHA" />
 
         <div class="button-group">
-          <button class="btn button-entrar">ENTRAR</button>
-          <button class="btn button-cadastrar">CRIAR CADASTRO</button>
+          <button @click="login" class="btn button-entrar">ENTRAR</button>
+          <button @click="cadastro" class="btn button-cadastrar">
+            CRIAR CADASTRO
+          </button>
         </div>
       </form>
     </div>
-  
-  
   </div>
-
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "sublime@gmail.com",
+      senha: "12345",
+    };
+  },
+  methods: {
+    login() {
+      if (this.email && this.senha) {
+        if (this.email == "sublime@gmail.com" && this.senha == "12345") {
+          this.$router.push({ name: "Menu" });
+        }
+      }
+    },
+    cadastro() {
+      this.$router.push({ name: "Register" });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -76,7 +94,7 @@ export default {};
 .button-group button {
   position: absolute;
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button-entrar {
@@ -85,7 +103,7 @@ export default {};
   left: 37px;
 
   font-size: 15px;
-  background: #11C891;
+  background: #11c891;
 }
 
 .button-cadastrar {

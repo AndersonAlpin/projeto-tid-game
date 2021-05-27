@@ -13,8 +13,8 @@
         <input type="password" placeholder="CONFIRMAR SENHA" />
 
         <div class="button-group">
-          <button class="btn button-cadastrar">CADASTRAR</button>
-          <button class="btn button-login">JÁ TENHO CONTA</button>
+          <button @click="cadastro" class="btn button-cadastrar">CADASTRAR</button>
+          <button @click="login" class="btn button-login">JÁ TENHO CONTA</button>
         </div>
       </form>
     </div>
@@ -24,7 +24,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    cadastro() {
+      this.$router.push({ name: "Login" });
+    },
+    login() {
+      this.$router.push({ name: "Login" });
+    },
+  }
+};
 </script>
 
 <style scoped>

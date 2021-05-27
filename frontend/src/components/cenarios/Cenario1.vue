@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <template >
+      <template v-if="index == 0" >
         <div id="box">
           <!-- Cenário -->
           <img id="cenario" class="cenario" src="@/assets/cenarios/cenario1.png">
@@ -15,8 +15,18 @@
 </template>
 
 <script>
+import barramento from "@/barramento.js"
+
 export default {
-  methods: {
+  data() {
+    return {
+      index: 0
+    }
+  },
+  created(){
+    barramento.quandoPularQuestao(index => {
+      this.index = index;
+    })
   }
 }
 </script>

@@ -3,33 +3,58 @@
     <nav class="navbar m-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <button class="btn btn-warning m-1">Desistir</button>
-          <button class="btn btn-info">Pular</button>
+          <button @click="desistir" class="btn btn-warning m-1">
+            Desistir
+          </button>
+          <button @click="pular((index += 1))" class="btn btn-info">
+            Pular
+          </button>
         </a>
         <div id="questao">
           {{ questoes[index].questao }}
         </div>
-        <div id="pontuacao">PONTUAÇÃO: <span class="pontos">3000</span></div>
+        <div id="pontuacao">
+          PONTUAÇÃO: <span class="pontos">{{ pontos }}</span>
+        </div>
       </div>
     </nav>
   </div>
 </template>
 
 <script>
+import barramento from "@/barramento.js";
+
 export default {
   data() {
     return {
       index: 0,
+      pontos: 0,
       questoes: [
         {
           questao:
             "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?",
         },
         {
-          questao: "Clique no dispositívo que consegue controlar o computador."
-        }
+          questao: "Clique no dispositívo que consegue controlar o computador.",
+        },
       ],
     };
+  },
+  methods: {
+    pular(index) {
+      if (this.index.lenght < 3) {
+        barramento.pularQuestao(index);
+        this.index = index;
+      }
+    },
+    desistir() {
+      this.$router.push({ name: "MenuCategorias" });
+    },
+  },
+  created() {
+    barramento.quandoPularQuestao((index) => {
+      this.index = index;
+    });
   },
 };
 </script>
@@ -52,9 +77,7 @@ export default {
 }
 
 .pontos {
-  padding: 4px 7px;
-  border: 2px solid #fff;
-  border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 div#questao {
@@ -68,10 +91,6 @@ div#questao {
   background-color: #ffffff;
   border-radius: 22px;
 }
-
-/* .navbar-brand button{
-  margin-left: 5px;
-} */
 
 @media screen and (max-width: 380px) {
   .redes-sociais {

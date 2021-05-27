@@ -1,8 +1,6 @@
 <template>
   <div id="register">
     <div class="box">
-
-     
       <div class="bem-vindo">
         <span>Bem Vindo!</span>
       </div>
@@ -10,9 +8,9 @@
 
       <div class="form">
         <div class="button-group">
-          <button class="btn jogar">JOGAR</button>
+          <button @click="jogar" class="btn jogar">JOGAR</button>
           <button class="btn ranking">RANKING</button>
-          <button class="btn sobre">SOBRE O JOGO</button>
+          <button @click="sobre" class="btn sobre">SOBRE O JOGO</button>
         </div>
       </div>
     </div>
@@ -20,7 +18,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    jogar() {
+      this.$router.push({ name: "MenuCategorias" });
+    },
+    sobre() {
+      this.$router.push({ name: "About" });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -92,16 +99,16 @@ export default {};
 
 button.jogar {
   top: 80px;
-  background: #11C891;
+  background: #11c891;
 }
 
 button.ranking {
   top: 140px;
-  background: #FD3F3F;
+  background: #fd3f3f;
 }
 
 button.sobre {
   top: 200px;
-  border: 3px solid #470EAE;
+  border: 3px solid #470eae;
 }
 </style>

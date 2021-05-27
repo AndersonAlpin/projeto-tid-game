@@ -1,25 +1,43 @@
 <template>
-    <div class="container">
+  <div class="container">
+    <template  v-if="index == 1" >
       <div id="box">
         <!-- Cenário -->
-        <img class="cenario" src="@/assets/cenarios/cenario2.png">
+        <img class="cenario" src="@/assets/cenarios/cenario2.png" />
 
         <!-- Alternativas -->
-        <img class="opcoes" id="opcao-1" src="@/assets/cenarios/controle.png">
-        <img class="opcoes" id="opcao-2" src="@/assets/cenarios/mouse.png">
-        <img class="opcoes" id="opcao-3" src="@/assets/cenarios/applewatch.png">
+        <img class="opcoes" id="opcao-1" src="@/assets/cenarios/controle.png" />
+        <img class="opcoes" id="opcao-2" src="@/assets/cenarios/mouse.png" />
+        <img
+          class="opcoes"
+          id="opcao-3"
+          src="@/assets/cenarios/applewatch.png"
+        />
       </div>
+    </template>
   </div>
 </template>
 
 <script>
+import barramento from "@/barramento.js"
+
 export default {
-}
+  data() {
+    return {
+      index: 0
+    }
+  },
+  created() {
+    barramento.quandoPularQuestao(index => {
+      this.index = index;
+    })
+  },
+};
 </script>
 
 <style scoped>
 #box {
-  position:relative;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,44 +49,43 @@ export default {
   border: 5px solid rgb(61, 52, 52);
 }
 
-img#opcao-1{
+img#opcao-1 {
   position: absolute;
   width: 200px;
   left: 240px;
   bottom: -30px;
 }
 
-img#opcao-1:hover{
+img#opcao-1:hover {
   width: 210px;
 }
 
-img#opcao-2{
+img#opcao-2 {
   position: absolute;
   width: 210px;
   right: 250px;
   bottom: 40px;
 }
 
-img#opcao-2:hover{
+img#opcao-2:hover {
   width: 220px;
 }
 
-img#opcao-3{
+img#opcao-3 {
   position: absolute;
   width: 90px;
   left: 250px;
   bottom: 145px;
 }
 
-img#opcao-3:hover{
+img#opcao-3:hover {
   width: 95px;
 }
 
-img.opcoes:hover{
+img.opcoes:hover {
   cursor: pointer;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
 </style>

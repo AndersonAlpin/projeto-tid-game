@@ -13,7 +13,7 @@
       <div class="form">
         <div class="button-group">
           <button class="btn area-medica">ÁREA MÉDICA</button>
-          <button class="btn area-tecnologica">ÁREA TECNOLÓGICA</button>
+          <button @click="tecnologia" class="btn area-tecnologica">ÁREA TECNOLÓGICA</button>
           <button class="btn area-historica">ÁREA HISTÓRICA</button>
           <button class="btn conhecimentos-basicos">CONHECIMENTOS BÁSICOS</button>
         </div>
@@ -23,7 +23,16 @@
 </template>
 
 <script>
-export default {};
+import barramento from "@/barramento.js"
+
+export default {
+  methods: {
+    tecnologia() {
+      this.$router.push({ name: "Game" });
+      barramento.jogar();
+    },
+  },
+};
 </script>
 
 <style scoped>
