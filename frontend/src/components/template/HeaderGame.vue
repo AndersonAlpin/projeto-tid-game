@@ -72,13 +72,17 @@ export default {
     proximo(index) {
       barramento.pularQuestao(index);
     },
-    tentarNovamente(){
+    tentarNovamente() {
       barramento.tentarNovamente();
-    }
+    },
   },
   created() {
     barramento.quandoPularQuestao((index) => {
-      this.index = index;
+      if (this.index < 3) {
+        this.index = index;
+      } else {
+        this.$router.push({ name: "MenuCategorias" });
+      }
     });
 
     barramento.quandoRespostaCerta((result) => {
