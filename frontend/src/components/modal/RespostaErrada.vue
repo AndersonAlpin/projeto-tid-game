@@ -1,5 +1,5 @@
 <template>
-  <div id="modal-resultado" class="modal-container">
+  <div v-if="respostaErrada" id="modal-resultado" class="modal-container">
     <div class="modal-box">
       <img src="@/assets/images/carinha-choro.png" class="carinha-1" />
       <img src="@/assets/images/carinha-choro.png" class="carinha-2" />
@@ -9,15 +9,20 @@
       <span class="title">Você errou!</span>
 
       <div class="button-group">
-        <button class="btn button-sair">SAIR</button>
-        <button class="btn button-proximo">TENTAR NOVAMENTE</button>
+        <slot/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      respostaErrada: false,
+    }
+  },
+};
 </script>
 
 <style scoped>

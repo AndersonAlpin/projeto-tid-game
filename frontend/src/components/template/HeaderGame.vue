@@ -1,5 +1,15 @@
 <template>
   <div class="header-game">
+    <RespostaCerta>
+      <button @click="sair" class="btn button-sair">SAIR</button>
+      <button @click="proximo((index += 1))" class="btn button-proximo">
+        IR PARA PRÓXIMA
+      </button>
+    </RespostaCerta>
+    <RespostaErrada>
+      <button @click="sair" class="btn button-sair">SAIR</button>
+      <button @click="proximo" class="btn button-proximo">TENTAR NOVAMENTE</button>
+    </RespostaErrada>
     <nav class="navbar m-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -23,37 +33,51 @@
 
 <script>
 import barramento from "@/barramento.js";
+import RespostaCerta from "@/components/modal/RespostaCerta.vue";
+import RespostaErrada from "@/components/modal/RespostaErrada.vue";
 
 export default {
+  components: { RespostaCerta, RespostaErrada },
   data() {
     return {
       index: 0,
       pontos: 0,
       questoes: [
         {
-          questao:
-            "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?",
+          questao: "QUAL  DISPOSITIVO  DESCARREGA MAIS RAPIDO?",
         },
         {
           questao: "Clique no dispositívo que consegue controlar o computador.",
+        },
+        {
+          questao:
+            "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?",
         },
       ],
     };
   },
   methods: {
     pular(index) {
-      if (this.index.lenght < 3) {
-        barramento.pularQuestao(index);
-        this.index = index;
-      }
+      barramento.pularQuestao(index);
+      this.index = index;
     },
     desistir() {
       this.$router.push({ name: "MenuCategorias" });
+    },
+    sair() {
+      this.$router.push({ name: "MenuCategorias" });
+    },
+    proximo(index) {
+      barramento.pularQuestao(index);
     },
   },
   created() {
     barramento.quandoPularQuestao((index) => {
       this.index = index;
+    });
+
+    barramento.quandoRespostaCerta((result) => {
+      if (result) this.pontos += 30;
     });
   },
 };

@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <template  v-if="index == 1" >
+    <template v-if="index == 1">
       <div id="box">
         <!-- Cenário -->
         <img class="cenario" src="@/assets/cenarios/cenario2.png" />
 
         <!-- Alternativas -->
         <img class="opcoes" id="opcao-1" src="@/assets/cenarios/controle.png" />
-        <img class="opcoes" id="opcao-2" src="@/assets/cenarios/mouse.png" />
+        <img @click="respostaCerta" class="opcoes" id="opcao-2" src="@/assets/cenarios/mouse.png" />
         <img
           class="opcoes"
           id="opcao-3"
@@ -19,18 +19,23 @@
 </template>
 
 <script>
-import barramento from "@/barramento.js"
+import barramento from "@/barramento.js";
 
 export default {
   data() {
     return {
-      index: 0
+      index: 0,
+    };
+  },
+  methods: {
+    respostaCerta(){
+      barramento.respostaCerta();
     }
   },
   created() {
-    barramento.quandoPularQuestao(index => {
+    barramento.quandoPularQuestao((index) => {
       this.index = index;
-    })
+    });
   },
 };
 </script>

@@ -6,9 +6,9 @@
           <img id="cenario" class="cenario" src="@/assets/cenarios/cenario1.png">
 
           <!-- Alternativas -->
-          <img class="opcoes" id="opcao-1" src="@/assets/cenarios/carregadorPortatil.png">
-          <img class="opcoes" id="opcao-2" src="@/assets/cenarios/carregadorNotebook.png">
-          <img class="opcoes" id="opcao-3" src="@/assets/cenarios/carregadorCelular.png">
+          <img @click="respostaErrada" class="opcoes" id="opcao-1" src="@/assets/cenarios/joy-play3.png">
+          <img @click="respostaErrada" class="opcoes" id="opcao-2" src="@/assets/cenarios/joy-xbox.png">
+          <img @click="respostaCerta" class="opcoes" id="opcao-3" src="@/assets/cenarios/iphone.png">
         </div>
       </template>
   </div>
@@ -21,6 +21,14 @@ export default {
   data() {
     return {
       index: 0
+    }
+  },
+  methods: {
+    respostaCerta(){
+      barramento.respostaCerta();
+    },
+    respostaErrada() {
+      barramento.respostaErrada();
     }
   },
   created(){
@@ -47,24 +55,24 @@ export default {
 
 img#opcao-1{
   position: absolute;
-  width: 300px;
-  left: 80px;
-  bottom: 20px;
+  width: 200px;
+  left: 200px;
+  bottom: 0px;
 }
 
 img#opcao-1:hover{
-  width: 310px;
+  width: 210px;
 }
 
 img#opcao-2{
   position: absolute;
-  width: 200px;
-  right: 110px;
-  bottom: 150px;
+  width: 180px;
+  right: 300px;
+  bottom: 0px;
 }
 
 img#opcao-2:hover{
-  width: 210px;
+  width: 190px;
 }
 
 img#opcao-3{

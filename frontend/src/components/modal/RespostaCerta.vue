@@ -1,5 +1,5 @@
 <template>
-  <div id="modal-resultado" class="modal-container">
+  <div v-if="respostaCerta" id="modal-resultado" class="modal-container">
     <div class="modal-box">
       <img src="@/assets/images/fundo-superior.png" class="fundo-superior" />
       <img src="@/assets/images/fundo-inferior.png" class="fundo-inferior" />
@@ -8,15 +8,31 @@
       <span class="subtitle">Você acertou!</span>
 
       <div class="button-group">
-        <button class="btn button-sair">SAIR</button>
-        <button class="btn button-proximo">IR PARA PRÓXIMA</button>
+        <slot/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import barramento from "@/barramento.js"
+
+export default {
+  data() {
+    return {
+      respostaCerta: false,
+    }
+  },
+  created() {
+    barramento.quandoRespostaCerta(result => {
+      this.respostaCerta = result;
+    })
+
+    barramento.quandoPularQuestao(index => {
+      if(index) this.respostaCerta = false;
+    })
+  }
+};
 </script>
 
 <style scoped>

@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <Audio />
     <img src="@/assets/images/logo-1.png" class="logo" />
     <div class="redes-sociais">
       <img src="@/assets/images/icon-whatsapp.png" class="img-redes-sociais" />
@@ -10,18 +9,12 @@
 </template>
 
 <script>
-import Audio from '@/components/Audio.vue';
 
 export default {
-  name: "Header", components: { Audio },
-
+  name: "Header",
 };
 
-
-
 </script>
-
-
 
 <style>
 .header {

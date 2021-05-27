@@ -13,6 +13,13 @@ export default new Vue({
     },
     quandoJogar(callback) {
       this.$on('jogar', callback)
+    },
+
+    respostaCerta() {
+      this.$emit('respostaCerta', true)
+    },
+    quandoRespostaCerta(callback) {
+      this.$on('respostaCerta', callback)
     }
   }
 })
