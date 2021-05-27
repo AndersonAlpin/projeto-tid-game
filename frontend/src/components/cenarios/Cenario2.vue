@@ -6,9 +6,10 @@
         <img class="cenario" src="@/assets/cenarios/cenario2.png" />
 
         <!-- Alternativas -->
-        <img class="opcoes" id="opcao-1" src="@/assets/cenarios/controle.png" />
+        <img @click="respostaErrada" class="opcoes" id="opcao-1" src="@/assets/cenarios/controle.png" />
         <img @click="respostaCerta" class="opcoes" id="opcao-2" src="@/assets/cenarios/mouse.png" />
         <img
+          @click="respostaErrada"
           class="opcoes"
           id="opcao-3"
           src="@/assets/cenarios/applewatch.png"
@@ -30,6 +31,9 @@ export default {
   methods: {
     respostaCerta(){
       barramento.respostaCerta();
+    },
+    respostaErrada() {
+      barramento.respostaErrada();
     }
   },
   created() {

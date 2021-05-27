@@ -6,9 +6,9 @@
           <img id="cenario" class="cenario" src="@/assets/cenarios/cenario3.png">
 
           <!-- Alternativas -->
-          <img class="opcoes" id="opcao-1" src="@/assets/cenarios/carregadorPortatil.png">
+          <img @click="respostaErrada" class="opcoes" id="opcao-1" src="@/assets/cenarios/carregadorPortatil.png">
           <img @click="respostaCerta" class="opcoes" id="opcao-2" src="@/assets/cenarios/carregadorNotebook.png">
-          <img class="opcoes" id="opcao-3" src="@/assets/cenarios/carregadorCelular.png">
+          <img @click="respostaErrada" class="opcoes" id="opcao-3" src="@/assets/cenarios/carregadorCelular.png">
         </div>
       </template>
   </div>
@@ -26,6 +26,9 @@ export default {
   methods: {
     respostaCerta(){
       barramento.respostaCerta();
+    },
+    respostaErrada() {
+      barramento.respostaErrada();
     }
   },
   created(){

@@ -8,7 +8,9 @@
     </RespostaCerta>
     <RespostaErrada>
       <button @click="sair" class="btn button-sair">SAIR</button>
-      <button @click="proximo" class="btn button-proximo">TENTAR NOVAMENTE</button>
+      <button @click="tentarNovamente" class="btn button-proximo">
+        TENTAR NOVAMENTE
+      </button>
     </RespostaErrada>
     <nav class="navbar m-3">
       <div class="container-fluid">
@@ -70,6 +72,9 @@ export default {
     proximo(index) {
       barramento.pularQuestao(index);
     },
+    tentarNovamente(){
+      barramento.tentarNovamente();
+    }
   },
   created() {
     barramento.quandoPularQuestao((index) => {

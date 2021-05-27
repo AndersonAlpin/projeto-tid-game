@@ -16,12 +16,23 @@
 </template>
 
 <script>
+import barramento from "@/barramento.js"
+
 export default {
   data() {
     return {
       respostaErrada: false,
     }
   },
+  created(){
+    barramento.quandoRespostaErrada(result => {
+      this.respostaErrada = result;
+    })
+
+    barramento.quandoTentarNovamente(result => {
+      this.respostaErrada = result;
+    })
+  }
 };
 </script>
 

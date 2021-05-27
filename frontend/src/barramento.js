@@ -20,6 +20,20 @@ export default new Vue({
     },
     quandoRespostaCerta(callback) {
       this.$on('respostaCerta', callback)
+    },
+
+    respostaErrada() {
+      this.$emit('respostaErrada', true)
+    },
+    quandoRespostaErrada(callback) {
+      this.$on('respostaErrada', callback)
+    },
+
+    tentarNovamente() {
+      this.$emit('tentarNovamente', false)
+    },
+    quandoTentarNovamente(callback) {
+      this.$on('tentarNovamente', callback)
     }
   }
 })
