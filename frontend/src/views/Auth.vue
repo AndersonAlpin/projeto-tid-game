@@ -24,24 +24,50 @@
           </b-input>
         </b-field>
 
-        <b-button class="button" type="is-success" expanded>ENTRAR</b-button>
-        <b-button type="is-ghost">Cadastre-se aqui!</b-button>
+        <b-field>
+          <b-input
+            v-if="showCadastro"
+            placeholder="Confirmar senha"
+            type="password"
+            icon="lock"
+            password-reveal
+          >
+          </b-input>
+        </b-field>
+
+        <!-- BOTÕES -->
+        <b-button v-if="showCadastro" class="button" type="is-success" expanded
+          >CADASTRAR</b-button
+        >
+        <b-button v-else class="button" type="is-success" expanded>ENTRAR</b-button>
+
+        <!-- LINK -->
+        <a class="link" href @click.prevent="showCadastro = !showCadastro">
+          <span v-if="showCadastro">Acesse o Login!</span>
+          <span v-else>Registre-se aqui!</span>
+        </a>
       </div>
       <!-- FIM FORMULÁRIO -->
     </div>
 
     <!-- IMAGENS DE FUNDO -->
-      <div class="fundo fundo-esquerdo">
-        <b-image :src="require('@/assets/icons/controle1.png')"></b-image>
-      </div>
-      <div class="fundo fundo-direito">
-        <b-image :src="require('@/assets/icons/controle2.png')"></b-image>
-      </div>
+    <div class="fundo fundo-esquerdo">
+      <b-image :src="require('@/assets/icons/controle1.png')"></b-image>
+    </div>
+    <div class="fundo fundo-direito">
+      <b-image :src="require('@/assets/icons/controle2.png')"></b-image>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      showCadastro: false,
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -60,7 +86,7 @@ export default {};
 }
 
 .box {
-  width: 300px;
+  width: 350px;
   margin: 5px;
   background-color: #fff;
   border-radius: 30px;
@@ -84,13 +110,18 @@ export default {};
 
 .button {
   color: #fff;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.link span {
+  font-weight: 400;
 }
 
 .fundo {
   position: absolute;
   filter: invert(20%);
   width: 20%;
-
 }
 
 .fundo-esquerdo {
