@@ -1,5 +1,6 @@
 <template>
   <div id="menu">
+    <Navbar />
     <MenuInicial />
     <MenuCategorias />
   </div>

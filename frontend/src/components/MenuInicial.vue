@@ -8,7 +8,7 @@
 
       <!-- BOTÕES -->
       <div class="buttons">
-        <b-button class="button" type="is-success" expanded>JOGAR</b-button>
+        <b-button @click="jogar" class="button" type="is-success" expanded>JOGAR</b-button>
         <b-button class="button" type="is-danger" expanded >RANKING</b-button>
         <b-button class="button" type="is-primary" expanded outlined>SOBRE</b-button>
       </div>
@@ -17,12 +17,20 @@
 </template>
 
 <script>
+import barramento from "@/barramento"
+
 export default {
   data() {
     return {
       showMenu: true,
     };
   },
+  methods: {
+    jogar(){
+      this.showMenu = false;
+      barramento.jogar();
+    }
+  }
 };
 </script>
 
@@ -43,7 +51,7 @@ export default {
 
 .box {
   width: 350px;
-  margin: 5px;
+  margin: 30px;
   background-color: #fff;
   border-radius: 30px;
 }

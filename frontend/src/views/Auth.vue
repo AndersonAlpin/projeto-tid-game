@@ -87,7 +87,7 @@ export default {
 
 .box {
   width: 350px;
-  margin: 5px;
+  margin: 30px;
   background-color: #fff;
   border-radius: 30px;
 }

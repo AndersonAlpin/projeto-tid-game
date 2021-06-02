@@ -11,21 +11,34 @@
 
       <!-- BOTÕES -->
       <div class="buttons">
-        <b-button class="button" type="is-primary" expanded>ÁREA MÉDICA</b-button>
-        <b-button class="button" type="is-primary" expanded>ÁREA TECNOLÓGICA</b-button>
-        <b-button class="button" type="is-primary" expanded>ÁREA HISTÓRICA</b-button>
-        <b-button class="button" type="is-primary" expanded>CONHECIMENTOS BÁSICOS</b-button>
+        <b-button class="button" type="is-primary" expanded
+          >ÁREA MÉDICA</b-button
+        >
+        <b-button class="button" type="is-primary" expanded
+          >ÁREA TECNOLÓGICA</b-button
+        >
+        <b-button class="button" type="is-primary" expanded
+          >ÁREA HISTÓRICA</b-button
+        >
+        <b-button class="button" type="is-primary" expanded
+          >CONHECIMENTOS BÁSICOS</b-button
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import barramento from "@/barramento"
+
 export default {
   data() {
     return {
       showMenu: false,
     };
+  },
+  created() {
+    barramento.quandoJogar((result) => (this.showMenu = result));
   },
 };
 </script>
@@ -47,7 +60,7 @@ export default {
 
 .box {
   width: 350px;
-  margin: 5px;
+  margin: 30px;
   background-color: #fff;
   border-radius: 30px;
 }
