@@ -120,7 +120,7 @@ export default {
 
 .fundo {
   position: absolute;
-  filter: invert(20%);
+  filter: invert(25%);
   width: 20%;
 }
 
