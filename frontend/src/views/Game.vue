@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h1>Game</h1>
+    <NavbarGame />
   </div>
 </template>
 
 <script>
+import NavbarGame from "@/components/NavbarGame.vue";
 
 export default {
+  components: { NavbarGame },
 };
 </script>
 
