@@ -9,17 +9,23 @@
 
     <div id="box">
       <!-- IMAGEM CENÁRIO -->
-        <b-image :src="require('@/assets/images/cenario1.png')"></b-image>
+      <b-image :src="require('@/assets/images/cenario3.png')"></b-image>
 
       <!-- IMAGENS ALTERNATIVAS -->
       <div @click="teste" class="alternativa-1 alternativas">
-        <b-image :src="require('@/assets/images/joy-play3.png')"></b-image>
+        <b-image
+          :src="require('@/assets/images/carregadorCelular.png')"
+        ></b-image>
       </div>
       <div @click="teste" class="alternativa-2 alternativas">
-        <b-image :src="require('@/assets/images/joy-xbox.png')"></b-image>
+        <b-image
+          :src="require('@/assets/images/carregadorNotebook.png')"
+        ></b-image>
       </div>
       <div @click="teste" class="alternativa-3 alternativas">
-        <b-image :src="require(`@/assets/images/${alternativa3}`)"></b-image>
+        <b-image
+          :src="require(`@/assets/images/carregadorPortatil.png`)"
+        ></b-image>
       </div>
     </div>
   </div>
@@ -29,14 +35,87 @@
 export default {
   data() {
     return {
-      alternativa3: 'iphone.png',
-    }
+      alternativa3: "iphone.png",
+      cenarios: [
+        {
+          // Alternativa 1
+          src: "cenario1.png",
+          questao:
+            "Você acaba de comprar um notebook, qual desses dispositivos serve para carregar o seu notebook?",
+          a1: {
+            src: "joy-play3.png",
+            width: "16%",
+            bottom: "0%",
+            right: "0%",
+          },
+          a2: {
+            src: "joy-xbox.png",
+            width: "16%",
+            bottom: "0%",
+            right: "10%",
+          },
+          a3: {
+            src: "iphone.png",
+            width: "16%",
+            bottom: "0%",
+            right: "30%",
+          },
+        },
+        {
+          // Alternativa 2
+          src: "cenario2.png",
+          questao: "Clique no DISPOSITIVO que consegue controlar o computador",
+          a1: {
+            src: "controle.png",
+            width: "19%",
+            bottom: "0%",
+            right: "65%",
+          },
+          a2: {
+            src: "mouse.png",
+            width: "20%",
+            bottom: "5%",
+            right: "25%",
+          },
+          a3: {
+            src: "chave.png",
+            width: "10%",
+            bottom: "25%",
+            right: "40%",
+          },
+        },
+        {
+          // Alternativa 3
+          src: "cenario2.png",
+          questao:
+            "Você acaba de comprar um notebook, qual  desses dispositivos serve para carregar seu notebook?",
+          a1: {
+            src: "carregadorCelular.png",
+            width: "15%",
+            bottom: "0%",
+            right: "7%",
+          },
+          a2: {
+            src: "carregadorNotebook.png",
+            width: "17%",
+            bottom: "0%",
+            right: "76%",
+          },
+          a3: {
+            src: "carregadorPortatil.png",
+            width: "16%",
+            bottom: "22%",
+            right: "70%",
+          },
+        },
+      ],
+    };
   },
   methods: {
-    teste(){
-      console.log('Perfect');
-    }
-  }
+    teste() {
+      console.log("Perfect");
+    },
+  },
 };
 </script>
 
@@ -90,35 +169,45 @@ p {
 
 .alternativas {
   position: absolute;
-  width: 17%;
-}
-
-.alternativas:hover {
-  width: 18%;
 }
 
 /* ALTERNATIVA 1 */
-.alternativa-1{
+.alternativa-1 {
+  width: 15%;
   bottom: 0;
-  right: 65%;
+  right: 7%;
+}
+
+.alternativa-1:hover {
+  width: 16%;
 }
 
 /* ALTERNATINA 2 */
-.alternativa-2{
-  bottom: 0;
-  right: 10%;
+.alternativa-2 {
+  width: 17%;
+  bottom: 0%;
+  right: 76%;
+}
+
+.alternativa-2:hover {
+  width: 18%;
 }
 
 /* ALTERNATIVA 3 */
-.alternativa-3{
-  bottom: 0px;
-  right: 30%;
+.alternativa-3 {
+  width: 16%;
+  bottom: 22%;
+  right: 70%;
+}
+
+.alternativa-3:hover {
+  width: 17%;
 }
 
 /* Media Screen */
 @media screen and (max-device-width: 500px) {
-	.questao {
-		font-size: 18px;
-	}
+  .questao {
+    font-size: 18px;
+  }
 }
 </style>
