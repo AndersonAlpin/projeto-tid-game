@@ -15,9 +15,8 @@
 
           <div class="user-logged">
             <b-navbar-dropdown label="Sublime Gaming">
-              <b-navbar-item> Configurações </b-navbar-item>
-              <b-navbar-item> Menu </b-navbar-item>
-              <b-navbar-item> Sair </b-navbar-item>
+              <b-navbar-item @click="menu" > Menu </b-navbar-item>
+              <b-navbar-item @click="sair" > Sair </b-navbar-item>
             </b-navbar-dropdown>
           </div>
         </b-navbar-item>
@@ -29,6 +28,14 @@
 <script>
 export default {
   props: ["name", "logout"],
+  methods: {
+    menu() {
+      this.$router.push({ name: "Menu" });
+    },
+    sair() {
+      this.$router.push({ name: "Auth" });
+    },
+  },
 };
 </script>
 

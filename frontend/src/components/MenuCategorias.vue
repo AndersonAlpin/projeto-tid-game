@@ -14,7 +14,7 @@
         <b-button class="button" type="is-primary" expanded
           >ÁREA MÉDICA</b-button
         >
-        <b-button class="button" type="is-primary" expanded
+        <b-button @click="tecnologia" class="button" type="is-primary" expanded
           >ÁREA TECNOLÓGICA</b-button
         >
         <b-button class="button" type="is-primary" expanded
@@ -36,6 +36,11 @@ export default {
     return {
       showMenu: false,
     };
+  },
+  methods: {
+    tecnologia() {
+      this.$router.push({ name: "Game" });
+    },
   },
   created() {
     barramento.quandoJogar((result) => (this.showMenu = result));

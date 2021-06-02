@@ -9,9 +9,10 @@
 <script>
 import MenuCategorias from "@/components/MenuCategorias.vue";
 import MenuInicial from "@/components/MenuInicial.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
-components: { MenuCategorias, MenuInicial }
+components: { MenuCategorias, MenuInicial, Navbar }
 }
 </script>
 

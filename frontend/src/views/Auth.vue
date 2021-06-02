@@ -36,10 +36,22 @@
         </b-field>
 
         <!-- BOTÕES -->
-        <b-button v-if="showCadastro" class="button" type="is-success" expanded
+        <b-button
+          @click="showCadastro = !showCadastro"
+          v-if="showCadastro"
+          class="button"
+          type="is-success"
+          expanded
           >CADASTRAR</b-button
         >
-        <b-button v-else class="button" type="is-success" expanded>ENTRAR</b-button>
+        <b-button
+          @click="login"
+          v-else
+          class="button"
+          type="is-success"
+          expanded
+          >ENTRAR</b-button
+        >
 
         <!-- LINK -->
         <a class="link" href @click.prevent="showCadastro = !showCadastro">
@@ -66,6 +78,11 @@ export default {
     return {
       showCadastro: false,
     };
+  },
+  methods: {
+    login() {
+      this.$router.push({ name: "Menu" });
+    },
   },
 };
 </script>
