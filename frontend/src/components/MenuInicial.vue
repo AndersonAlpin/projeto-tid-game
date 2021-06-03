@@ -37,6 +37,7 @@ export default {
 <style scoped>
 #menu-inicial {
   position: relative;
+  min-width: 100vw;
   min-height: 100vh;
   background-image: linear-gradient(
     129deg,

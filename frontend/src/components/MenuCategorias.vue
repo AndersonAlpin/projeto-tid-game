@@ -51,6 +51,7 @@ export default {
 <style scoped>
 #menu-categorias {
   position: relative;
+  min-width: 100vw;
   min-height: 100vh;
   background-image: linear-gradient(
     129deg,

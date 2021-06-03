@@ -59,13 +59,13 @@
 export default {
   data() {
     return {
-      index: 2,
+      index: 1,
       cenarios: [
         {
           // Alternativa 1
           src: "cenario1.png",
           questao:
-            "Você acaba de comprar um notebook, qual desses dispositivos serve para carregar o seu notebook?",
+            "Qual dispositivo descarrega mais rápido?",
           a1: {
             src: "joy-play3.png",
             width: 16,
