@@ -10,7 +10,7 @@
       <div class="buttons">
         <b-button @click="jogar" class="button" type="is-success" expanded>JOGAR</b-button>
         <b-button class="button" type="is-danger" expanded >RANKING</b-button>
-        <b-button class="button" type="is-primary" expanded outlined>SOBRE</b-button>
+        <b-button @click="sobre" class="button" type="is-primary" expanded outlined>SOBRE</b-button>
       </div>
     </div>
   </div>
@@ -29,6 +29,9 @@ export default {
     jogar(){
       this.showMenu = false;
       barramento.jogar();
+    },
+    sobre(){
+      this.$router.push({ name: "About"});
     }
   }
 };
