@@ -33,6 +33,9 @@ export default {
     sobre(){
       this.$router.push({ name: "About"});
     }
+  },
+  created() {
+    barramento.sairSobre();
   }
 };
 </script>

@@ -23,6 +23,7 @@ export default {
   },
   created() {
     barramento.quandoAbrirSobre((result) => (this.showFundo = result));
+    barramento.quandoSairSobre((result) => (this.showFundo = result));
   },
 };
 </script>

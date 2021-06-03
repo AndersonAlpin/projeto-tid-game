@@ -44,6 +44,7 @@ export default {
   },
   created() {
     barramento.quandoJogar((result) => (this.showMenu = result));
+    barramento.sairSobre();
   },
 };
 </script>

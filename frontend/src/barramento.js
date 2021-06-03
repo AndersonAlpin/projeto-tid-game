@@ -13,6 +13,13 @@ export default new Vue({
     },
     quandoAbrirSobre(callback) {
       this.$on('abrirSobre', callback)
-    }
+    },
+
+    sairSobre() {
+      this.$emit('sairSobre', true);
+    },
+    quandoSairSobre(callback) {
+      this.$on('sairSobre', callback)
+    },
   }
 });
