@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #about {
   text-align: center;
   min-width: 100vw;

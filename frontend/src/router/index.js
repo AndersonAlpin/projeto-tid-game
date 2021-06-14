@@ -4,6 +4,7 @@ import Auth from '../views/Auth.vue'
 import Game from '../views/Game.vue'
 import Menu from '../views/Menu.vue'
 import About from '../views/About.vue'
+import Ranking from '../views/Ranking.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/ranking',
+    name: 'Ranking',
+    component: Ranking
   },
 ]
 

@@ -59,7 +59,7 @@
 export default {
   data() {
     return {
-      index: 1,
+      index: 0,
       cenarios: [
         {
           // Alternativa 1
